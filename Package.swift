@@ -1,4 +1,4 @@
-// swift-tools-version: 5.5
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
@@ -7,8 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "ScanditCapacitorDatacapturePriceLabel",
-            targets: ["ScanditPriceLabelNativePlugin"]
-        )
+            targets: ["ScanditPriceLabelNativePlugin"])
     ],
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", from: "7.0.0")
@@ -18,14 +17,12 @@ let package = Package(
             name: "ScanditPriceLabelNativePlugin",
             dependencies: [
                 .product(name: "Capacitor", package: "capacitor-swift-pm"),
-                .product(name: "Cordova", package: "capacitor-swift-pm"),
+                .product(name: "Cordova", package: "capacitor-swift-pm")
             ],
-            path: "ios/Sources/ScanditPriceLabelNativePlugin"
-        ),
+            path: "ios/Sources/ScanditPriceLabelNativePlugin"),
         .testTarget(
             name: "ScanditPriceLabelNativePluginTests",
             dependencies: ["ScanditPriceLabelNativePlugin"],
-            path: "ios/Tests/ScanditPriceLabelNativePluginTests"
-        ),
+            path: "ios/Tests/ScanditPriceLabelNativePluginTests")
     ]
 )

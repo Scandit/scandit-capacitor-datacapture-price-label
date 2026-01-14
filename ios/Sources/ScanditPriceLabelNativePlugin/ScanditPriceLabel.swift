@@ -4,12 +4,12 @@
  * Copyright (C) 2025- Scandit AG. All rights reserved.
  */
 
-import Capacitor
 import Foundation
+import Capacitor
 
 @objc(ScanditPriceLabelNative)
 public class ScanditPriceLabelNative: CAPPlugin {
-
+    
     @objc func echo(_ call: CAPPluginCall) {
         call.resolve()
     }
